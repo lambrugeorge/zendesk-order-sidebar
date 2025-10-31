@@ -1,0 +1,10 @@
+{
+    "john@example.com": [
+      { "orderId": "ORD1001", "date": "2025-10-10", "status": "Delivered" },
+      { "orderId": "ORD1020", "date": "2025-10-28", "status": "Shipped" }
+    ],
+    "adrian@example.com": [
+      { "orderId": "ORD2001", "date": "2025-09-05", "status": "Processing" }
+    ]
+  }
+  
