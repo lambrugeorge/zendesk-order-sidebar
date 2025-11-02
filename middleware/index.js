@@ -20,10 +20,49 @@ app.get('/order', (req, res) => {
         res.json(latest);
 });
 
-/* Accept text and return a mock..*/
+/* Accept text and return a mock AI summary*/
 app.post('/ai-summary', (req, res)=> {
     const { text } = req.body;
-    const summary = text ? (text.slice(0,120) + (text.length > 120 ? '...' : '')) : '';
+    if (!text) {
+        return res.json({ summary: 'No text provided for summarization.' });
+    }
+    
+    // Mock AI processing - simulate intelligent summarization
+    const lines = text.split('\n').filter(l => l.trim().length > 0);
+    const hasOrder = /order|ORD/i.test(text);
+    const hasIssue = /problem|issue|error|bug|broken/i.test(text);
+    const hasRequest = /request|need|want|please/i.test(text);
+    
+    let summary = `📋 Ticket Summary:\n\n`;
+    
+    if (lines.length > 0) {
+        summary += `• Main Topic: ${lines[0].substring(0, 80)}${lines[0].length > 80 ? '...' : ''}\n`;
+    }
+    
+    if (hasOrder) {
+        summary += `• Mentions order information\n`;
+    }
+    if (hasIssue) {
+        summary += `• Reports an issue or problem\n`;
+    }
+    if (hasRequest) {
+        summary += `• Contains a request or inquiry\n`;
+    }
+    
+    summary += `\n📊 Statistics:\n`;
+    summary += `• Total comments processed: ${lines.length}\n`;
+    summary += `• Text length: ${text.length} characters\n`;
+    
+    // Add key points if text is long enough
+    if (text.length > 200) {
+        summary += `\n💡 Key Points:\n`;
+        const sentences = text.match(/[^.!?]+[.!?]+/g) || [];
+        const keySentences = sentences.slice(0, 2);
+        keySentences.forEach((s, i) => {
+            summary += `${i + 1}. ${s.trim()}\n`;
+        });
+    }
+    
     res.json({ summary });
 });
 

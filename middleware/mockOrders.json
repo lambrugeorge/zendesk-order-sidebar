@@ -1,10 +1,37 @@
 {
     "john@example.com": [
-      { "orderId": "ORD1001", "date": "2025-10-10", "status": "Delivered" },
-      { "orderId": "ORD1020", "date": "2025-10-28", "status": "Shipped" }
+      { 
+        "id": "ORD1001", 
+        "date": "2025-10-10", 
+        "status": "Delivered",
+        "total": "$299.99",
+        "items": [
+          { "name": "Laptop Stand", "quantity": 1 },
+          { "name": "Wireless Mouse", "quantity": 2 }
+        ]
+      },
+      { 
+        "id": "ORD1020", 
+        "date": "2025-10-28", 
+        "status": "Shipped",
+        "total": "$149.50",
+        "items": [
+          { "name": "USB-C Cable", "quantity": 3 },
+          { "name": "Keyboard", "quantity": 1 }
+        ]
+      }
     ],
     "adrian@example.com": [
-      { "orderId": "ORD2001", "date": "2025-09-05", "status": "Processing" }
+      { 
+        "id": "ORD2001", 
+        "date": "2025-09-05", 
+        "status": "Processing",
+        "total": "$89.99",
+        "items": [
+          { "name": "Webcam HD", "quantity": 1 },
+          { "name": "Microphone", "quantity": 1 }
+        ]
+      }
     ]
   }
   

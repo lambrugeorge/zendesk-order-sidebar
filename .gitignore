@@ -1,0 +1,9 @@
+node_modules/
+.npm
+.zendesk_app_settings.json
+*.log
+.DS_Store
+.env
+dist/
+build/
+

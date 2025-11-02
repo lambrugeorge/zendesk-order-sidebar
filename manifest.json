@@ -1,0 +1,25 @@
+{
+  "name": "Order Sidebar",
+  "author": {
+    "name": "Your Name",
+    "email": "your-email@example.com"
+  },
+  "version": "1.0.0",
+  "frameworkVersion": "2.0",
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "templates/iframe.html"
+      }
+    }
+  },
+  "parameters": [
+    {
+      "name": "middlewareUrl",
+      "type": "text",
+      "required": false,
+      "default": "http://localhost:3000"
+    }
+  ]
+}
+
