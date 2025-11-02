@@ -1,4 +1,9 @@
 # Zendesk Order Sidebar App
+![Photo](./images/project.png)
+![Photo](./images/JSON.png)
+![Photo](./images/docker.png)
+![Photo](./images/zendesk.png)
+![Photo](./images/email.png)
 
 A Zendesk sidebar application built with ZAF v2 that displays customer order information in tickets. Features automatic requester email detection, order fetching, internal comment posting, and AI-powered ticket processing.
 
